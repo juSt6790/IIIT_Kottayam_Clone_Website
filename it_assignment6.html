@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            border: 2px solid rgb(16, 15, 15);
+            margin-left:300px ;
+            margin-right:300px ;
+            padding: 25px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        img{
+            float:left;
+        }
+        .head{
+            text-align: center;
+        }
+        .register{
+            float: right;
+            display: inline;
+        }
+        .certi{
+            display: inline;
+        }
+        .cert{
+            display: inline;
+        }
+        .student{
+            float: right;
+        }
+        .pic{
+            text-align: center;
+        }
+        .fonts{
+            font-family:cursive;
+            font-weight: 800;
+            font-size: x-large;
+        }
+        .clar{
+            clear: right;
+        }
+        table{
+            border-collapse: collapse;
+            border: 2px solid black;
+        }
+        td,th{
+            border: 1px solid rgb(73, 69, 69);
+        }
+        th{
+            background-color: rgb(140, 233, 140);
+        }
+        .btn{
+            background-color: rgb(97, 97, 176);
+            border: 1px solid black;
+            color: white;
+            padding: 5px;
+            margin: 5px;
+            border-radius: 4px;
+            margin-right: 190px;
+        }
+        .avg,.total{   
+            display: inline;
+        }
+        input{
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <img src="iiitk_logo.jpg" alt="" width="180px">
+    <div class="head">
+    <h1>INDIAN INSTITUTE OF INFORMATION TECHNOLOGY</h1>
+    <h2>Valavoor,Pala,Kerala-569273</h2>
+</div>
+
+<p class="cert">Certificate No:20023/1001/A </p>
+<p class="register">Register No: 2020BCS0195</p>
+<hr>
+<div class="pic">
+    <p class="fonts">Student Marks Memo</p>
+    <img src="nobita.jpg" alt="" width="180px" height="160px" class="student">
+</div>
+<p class="clar">This markssheet is awarded to:
+    <input type="text" name="" id="">
+</p>
+<br><br>
+<p>On Succesfull Completion of Course:
+    <input type="text">
+</p>
+<br><br>
+<p>On Duration:
+    <input type="text" name="" id="">
+</p>
+<br><br>
+<p>
+    From Authorised Training Center:
+    <input type="text" name="" id="">
+</p>
+<br><br>
+<table>
+    <thead>
+        <th>S.No</th>
+        <th>Subject Offered</th>
+        <th colspan="3">Full Marks</th>
+        <th colspan="3">Marks Obtained</th>
+    </thead>
+    <tr>
+        <td> </td>
+        <td> </td>
+        <td>Theory</td>
+        <td>Lab</td>
+        <td>Total</td>
+        <td>Theory</td>
+        <td>Lab</td>
+        <td>Total</td>
+    </tr>
+    <tr>
+        <td>CS1</td>
+        <td>C</td>
+        <td>70</td>
+        <td >30</td>
+        <td class="a2">100</td>
+        <td><input type="number" id="a1"></td>
+        <td><input type="number" id="a2"></td>
+        <td><input type="number" id="a3"></td>
+    </tr>
+    <tr>
+        <td>CS2</td>
+        <td>C++</td>
+        <td>70</td>
+        <td>30</td>
+        <td>100</td>
+        <td><input type="number" id="a4"></td>
+        <td><input type="number" id="a5"></td>
+        <td><input type="number" id="a6"></td>
+    </tr>
+    <tr>
+        <td>CS3</td>
+        <td>Java</td>
+        <td>70</td>
+        <td>30</td>
+        <td>100</td>
+        <td><input type="number" id="a7"></td>
+        <td><input type="number" id="a8"></td>
+        <td><input type="number" id="a9"></td>
+    </tr>
+    <tr>
+        <td>CS4</td>
+        <td>Python</td>
+        <td>70</td>
+        <td>30</td>
+        <td>100</td>
+        <td><input type="number" id="a10"></td>
+        <td><input type="number" id="a11"></td>
+        <td><input type="number" id="a12"></td>
+    </tr>
+    <tr>
+        <td>CS5</td>
+        <td>Go</td>
+        <td>70</td>
+        <td>30</td>
+        <td>100</td>
+        <td><input type="number" id="a13"></td>
+        <td><input type="number" id="a14"></td>
+        <td><input type="number" id="a15"></td>
+    </tr>
+    <tr>
+        <td>CS6</td>
+        <td>Rust</td>
+        <td>70</td>
+        <td>30</td>
+        <td>100</td>
+        <td><input type="number" id="a16"></td>
+        <td><input type="number" id="a17"></td>
+        <td><input type="number" id="a18"></td>
+    </tr>
+</table>
+<br>
+<button type="button" onclick="sum()">Submit</button>
+<p class="total">Total:
+<input type="number" id="total">
+</p>
+<p class="avg">Average:
+    <input type="number" id="avg">
+</p>
+<br><br>    
+
+<p>Note: <br>
+     1. After entering the data into Marks obtained theory textbox and lab text box data fill into
+third total text box <br>
+2. After clicking the submit button total marks and average need to display in the text boxes. <br>
+3. As shown in the above table header row should be colored and also maintain the
+alignment properly, <br>
+4. Validate total marks of each subject not greater than 100 if some mistake done provide an
+alert to the user total should less than 100.
+</p>
+<script>
+    
+function sum()
+            {
+                var sum=0;
+                var suma=0;
+                for(var t=1;t<18;t++)
+              {
+                if(t%3!=0)
+                {
+                    suma+=parseInt(document.getElementById("a"+t).value);
+
+                }
+              }
+              document.getElementById("total").value=suma;
+              document.getElementById("avg").value=suma/6;
+            }  
+            for(var j=1;j<=6;j++)
+              {
+                const theory=document.getElementById("a"+(3*(j-1)+1));
+                const lab=document.getElementById("a"+(3*(j-1)+2));
+                const total=document.getElementById("a"+(3*(j-1)+3));
+                theory.addEventListener("change",function(){update(theory,lab,total)});
+                lab.addEventListener("change",function(){update(theory,lab,total)});
+              
+              
+              
+}
+function update(theory,lab,total)
+{
+    console.log("hello");
+    total.value=parseInt(theory.value)+parseInt(lab.value);
+    if(total.value>100){
+        alert("TOTAL IS GREATER THAN 100");
+        total.value=0;
+    }
+}
+function add(){
+    var sum1=0;
+    for(var i=1;i<18;i++){
+        if(i%3!=0){
+            sum1+=document.getElementById("a"+i).value;
+        }
+    }
+    document.getElementById("total").value=sum1;
+    document.getElementById("avg").value=sum1/6;
+}
+for(var j=1;j<)
+</script>
+</body>
+</html>

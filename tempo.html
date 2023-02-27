@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        td{
+            border: 2px solid black;
+        }
+    </style>
+    <script>
+        function changed(){
+            var a=document.getElementById("comp");
+            a.setAttribute("href","https://www.google.com")
+        }
+        function changed1(){
+            var a=document.getElementById("ai");
+            a.setAttribute("href","https://www.iiitkottayam.ac.in/#!/btech_ai_home")
+        }
+        function changed2(){
+            var a=document.getElementById("cy");
+            a.setAttribute("href"," ")
+        }
+        function changed3(){
+            var a=document.getElementById("ece");
+            a.setAttribute("href","https://www.iiitkottayam.ac.in/#!/btech_ec_home");
+        }
+        function display(){
+            alert("Academic Year: 2022-2023");
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="5" >LIST OF COURSES</td>
+        </tr>
+        <tr>
+            <td colspan="3" >COMPUTER SCIENCE AND ENGINEERING</td>
+            <td colspan="2" >ELECTRONICS ENGINEERING</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>COMPUTER SCIENCE</td>
+            <td ><a href="#" id="comp" onfocus="changed()" >IIIT KOTTAYAM</a></td>
+            <td rowspan="3" ></td>
+            <td rowspan="3"><a href="#" id="ece" onfocus="changed3()" >IIIT KOTTAYAM</a></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>AI % DATA SCIENCE</td>
+            <td ><a href="#" id="ai" onfocus="changed1()" >IIIT KOTTAYAM</a></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>CYBER SECURITY</td>
+            <td ><a href="#" id="cy" onfocus="changed2()" >IIIT KOTTAYAM</a></td>
+        </tr>
+        <tr>
+            <td colspan="3" ><button type="button" id="disp" onfocus="display()" >AY: 2022-2023 </button></td>
+            <td colspan="2" ><button type="button" >AY: 2022-2023</button></td>
+        </tr>
+    </table>
+</body>
+</html>
